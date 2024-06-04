@@ -82,7 +82,7 @@ local dap = require('dap')
 dap.adapters.csharp = {
 	type = 'executable';
 	command = os.getenv('HOME') .. '/.local/share/nvim/mason/bin';
-	args = { -m, 'netcoredbg.adapter' }
+	args = { '-m', 'netcoredbg.adapter' }
 }
 
   -- Set up nvim-cmp.
