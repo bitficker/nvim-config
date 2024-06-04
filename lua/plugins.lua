@@ -78,6 +78,13 @@ require('telescope').load_extension('fzf')
 local lspconfig = require('lspconfig')
 lspconfig.omnisharp.setup{}
 
+local dap = require('dap')
+dap.adapters.csharp = {
+	type = 'executable';
+	command = os.getenv('HOME') .. '/.local/share/nvim/mason/bin';
+	args = { -m, 'netcoredbg.adapter' }
+}
+
   -- Set up nvim-cmp.
   local cmp = require'cmp'
 
