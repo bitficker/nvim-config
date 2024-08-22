@@ -60,6 +60,13 @@ require('packer').startup(function(use)
 
 	use 'mfussenegger/nvim-dap'
 
+	use { 
+  		'morhetz/gruvbox',
+  		config = function()
+    			vim.cmd('colorscheme gruvbox')
+  		end
+	}
+
 end)
 
 
